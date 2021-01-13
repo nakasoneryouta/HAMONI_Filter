@@ -3,25 +3,25 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { BottomTabType } from '../@types';
 
 type State = {
-	token: BottomTabType | null,
+	tab: BottomTabType,
 }
 
 const initialState: State = {
-	token: null,
+	tab: 'filter',
 }
 
 const accessTokenStore = createSlice({
-	name: 'accessToken',
+	name: 'tab',
 	initialState,
 	reducers: {
-		setToken(state: State, action: PayloadAction<BottomTabType>) {
-			state.token = action.payload
+		changeTab(state: State, action: PayloadAction<BottomTabType>) {
+			state.tab = action.payload
 		}
 	}
 })
 
 export const {
-	setToken
+	changeTab
 } = accessTokenStore.actions
 
 export default accessTokenStore

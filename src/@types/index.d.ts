@@ -4,6 +4,7 @@ type HomeNavigatorParamList = {
   SingleImageEditErea: undefined;
   MultiImageEditErea: undefined;
   SelectEffect: undefined;
+  SelectImages: undefined;
 };
 
 type BottomTabType = 'edit' | 'filter' | 'slider' | 'angle'

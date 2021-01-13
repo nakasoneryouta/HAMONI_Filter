@@ -40,8 +40,8 @@ const component: React.FC<Props> = ({ navigation }) => {
   return (
     <View style={styles.container}>
 
-      <Header text={""} />
-      
+      <Header title={""} left={{source: images.backArrow,onPress: () => navigation.goBack()}} right={{text: "次へ",onPress: () => console.log("保存")}}/>
+
       <View style = {styles.carouselContainer}>
         <Carousel
             ref={carouselRef}

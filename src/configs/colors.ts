@@ -21,6 +21,6 @@ export default {
   skyBlue: '#5AC8FA',
   blue: '#007AFF',
   purple: '#5856D6',
-  pink: '#AF52DE',
+  pink: '#0094F6',
   pinkRed: '#FF2D55',
 };

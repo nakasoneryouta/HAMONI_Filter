@@ -4,6 +4,8 @@ const images = {
   contrast: require('../../assets/images/contrast.png'),
   tint: require('../../assets/images/tint.png'),
   angle: require('../../assets/images/angle.png'),
+  close: require('../../assets/images/close.png'),
+  backArrow: require('../../assets/images/backArrow.png'),
   saturation: require('../../assets/images/saturation.png'),
   noodles: require('../../assets/images/filters/noodles.png'),
   frid: require('../../assets/images/filters/frid.png'),

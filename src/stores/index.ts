@@ -3,18 +3,26 @@ import { configureStore, getDefaultMiddleware, combineReducers } from '@reduxjs/
 
 import { persistStore, persistReducer } from "redux-persist";
 
-import tabStore from "./TabStore";
+import tabStore from "./tabStore";
 
 
 const rootReducer = combineReducers({
-	tabStore: tabStore.reducer,
+	tab: tabStore.reducer,
 })
 
 export type RootState = ReturnType<typeof rootReducer>
 
-const persistedReducer = persistReducer(rootReducer);
+// 永続化の設定
+const persistConfig = {
+	key: 'root', // Storageに保存されるキー名を指定する
+	storage: AsyncStorage, // 保存先としてlocalStorageがここで設定される
+	whitelist: [''] // Storageに保存する
+}
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = configureStore({
+	// reducer: rootReducer
 	reducer: persistedReducer,
 	middleware: getDefaultMiddleware({
 		serializableCheck: false
